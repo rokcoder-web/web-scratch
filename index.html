@@ -1,0 +1,74 @@
+<!doctype html>
+
+<!--
+#    web-scratch: drop off point for scratch-related stuff
+#
+#    Copyright (C) 2022 RokCoder
+-->
+
+<head>
+
+    <title>RokCoder Scratch Projects</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="preload" href="css/rokcoder.css" as="style">
+    <link rel="stylesheet" href="css/rokcoder.css">
+
+</head>
+
+<body>
+
+    <!-- Header line - title and RokCoder -->
+    <div style="text-align: center; margin-bottom: 50px">
+        <a href="../index.html"><img class='rokcoder' style='position:absolute; right:6px' src="img/rokcoder.gif"></a>
+        <div class='shadow-text' style="font-size:54px; padding-top: 30px;">RokCoder's Scratch Projects</div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div style='border: thick black solid; border-radius: 8px; width: 80%; margin: auto'>
+        <!-- Genre tabs are added here dynamically -->
+        <div class="tab" id="genreTabs" style="display: flex"> </div>
+        <!-- Thumbnails are added here dynamically -->
+        <div class="scroll-row" style="padding-top: 10px"></div>
+    </div>
+
+    <div style="width:80%; margin:auto; margin-top:32px; display:flex">
+        <!-- Embedded TurboWarp -->
+        <div style="width:499px;">
+            <p id="title" class='shadow-text' style="font-size:32px; text-align: center; margin-bottom: 0px; height:40px"></p>
+            <div style="position: relative; display:flex; margin: auto; width: 499px; height: 416px; border: 4px solid black; border-radius: 8px;">
+                <div id='turboWarp' style="width: 499px; height: 416px; z-index: 7;"></div>
+                <img id='previewImage' src='' style="margin-left: 0%; width: 100%; height: 100%; border: none; outline: none; border-radius: 4Spx;">
+                <button id='playGameButton' class='shadow-text' style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border: solid black 4px; outline: none; border-radius: 8px; font-size: 40px; padding: 12px; cursor:pointer" onclick='playGame()'>Click here<br>to play</button>
+            </div>
+        </div>
+
+        <!-- Project details -->
+        <div style="margin-left:20px; width: 100%">
+            <div class="small-tab" style="height:40px; display:flex; flex-direction:column; justify-content: flex-end;">
+                <!-- Detail tabs are added here dynamically -->
+                <div id='detailTabs' style="display:flex; justify-content: flex-end"> </div>
+            </div>
+            <div style='border: thick black solid; border-radius: 8px; width: 100%; background-color: slategray; height: 416px'>
+                <div style='height: 384px; margin: 16px; overflow: auto'>
+                    <!-- Details are added here dynamically -->
+                    <div id="details" style="color: black; height: 100%; font-size: 22px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin: auto; margin-top: 40px; padding: 8px; width: 60%; border-radius: 12px; background-color:cadetblue; font-size: 20px; color: black; border: solid black 4px; text-align: center;">
+        <p>All projects on this site were created in Scratch by <a href="https://scratch.mit.edu/users/RokCoder/">RokCoder</a></p>
+        <div>Note that this site uses TurboWarp to play the games. This does mean that multiplayer features and cloud high score tables will not work. To use those you can play any of <a href="https://scratch.mit.edu/users/RokCoder/projects/">RokCoder's shared projects</a> via the Scratch website</div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="projectViewer.js"></script>
+
+</body>
+
+</html>
