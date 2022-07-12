@@ -21,6 +21,10 @@ var previewData;
 
 $(document).ready(function () {
 
+    $('#header').html(header);
+    $('#footer').html(footer);
+    $('#logo').attr('src', logo);
+
     // Set to use first tabbed genre, preview image of first game in that genre and first tabbed details view for that game
     genre = gameList.keys().next().value;
     let firstThumbId = gameList.get(genre).keys().next().value;
@@ -225,6 +229,9 @@ function playGame() {
     previewImage.fadeOut('fast', function () {
 
         // Fire up the game
-        turboWarp.append('<iframe id="test" src="https://turbowarp.org/' + thumbId + '/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>');
+        if (useTurboWarp)
+            turboWarp.append('<iframe id="test" src="https://turbowarp.org/' + thumbId + '/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>');
+        else
+            turboWarp.append('<iframe src="https://scratch.mit.edu/projects/' + thumbId + '/embed" allowtransparency="true" width="499" height="416" frameborder="0" scrolling="no" allowfullscreen></iframe>');
     });
 }

@@ -1,3 +1,13 @@
+// Modify these lines to make the website your own
+const header = 'RokCoder Scratch Projects';
+const footer = 'All projects on this site were created in Scratch by <a href="https://scratch.mit.edu/users/RokCoder/">RokCoder</a>';
+const logo = 'img/rokcoder.gif';
+
+// TurboWarp is a branch of Scratch (by @GarboMuffin) with many speed and operational improvements
+const useTurboWarp = false;
+
+// The projects can be broken up into genres - by default I'm using Ports, Arcade, Games, Multiplayer and Other
+// Each project can have any accompanying informational tabs as shown below - for example, the Tyrian game will present tabs for overview, credits, instructions and controls
 const gameList = new Map([
     [
         'Ports', new Map([
